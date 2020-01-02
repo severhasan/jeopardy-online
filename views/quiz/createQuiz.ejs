@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+    <link rel="stylesheet" href="/stylesheets/createquiz.css">
+</head>
+
+<div id='main-container'>
+    <div class='' id='content'>
+        <div style='margin: auto' id='form'>
+            <input class='input-main' type='text' id='setCategoryName' placeholder='capitals etc...'>
+            <button class='btn-main' id='add-category'>Add category</button>
+            <!-- <button type='submit' id='send' style='margin-left: 50px'>Send </button> -->
+        </div>
+        <hr>
+    </div>
+    
+    <div id='new-row'>
+        <input class='input-main' min='0' step='10' max='1000' type='number' id='row-value' value='10'>
+        <button class='btn-main' id='add-row'>Add a New Row</button>
+    </div>
+</div>
+
+
+<script type="text/Javascript">
+    const quizData = <%-JSON.stringify(quizData)%>;
+    
+    const isNew = <%-JSON.stringify(isNew)%>;
+    const quizCategories = <%-JSON.stringify(categories)%>;
+    const quizValues = <%-JSON.stringify(values)%>;
+    const author = <%-JSON.stringify(author)%>
+</script>
+
+<script type="text/Javascript" src="/javascript/createquiz.js"></script>
+
+<script type="text/Javascript" src="/javascript/message.js"></script>
+
+
+<% include ../partials/footer %>

@@ -1,0 +1,280 @@
+/* BELOW IS PLAY EJS */
+
+#root{
+    width: 100%;
+}
+#content {
+    padding: 10px;
+    width: 80%;
+}
+#root #content #categories {
+    margin-top: 6rem;
+}
+
+#info {
+    margin-left: 23vw;
+    width: 54vw;
+    position: absolute;
+    top: 20px;
+    z-index: 499;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgb(252, 240, 140);
+    border-radius: 10px;
+    border: 1px dashed black;
+    padding: 10px 0;
+}
+@media only screen and (max-width: 720px) {
+    #info {
+        margin: 0 auto;
+        width: 95%;
+        z-index: 500;
+        position: absolute;
+        top: 10px;
+        font-size: 1.2rem;
+    }
+}
+#info .info-text {
+    text-align: center;
+    padding: 0 20px;
+}
+#scorelist {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 2px 10px;
+    width: 15vw;
+    font-size: 1rem;
+    z-index: 500;
+    color: rgb(170, 77, 0);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+#scorelist i {
+    padding-right: 10px;
+    cursor: pointer;
+}
+#scorelist p {
+    margin: 0;
+}
+#time {
+    z-index: 500;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20vw;
+    font-size: 1.5rem;
+    width: 20vw;
+    border-radius: 5px;
+    
+    background-color: rgba(255, 255, 255, 0.25);
+    text-align: center;
+    transition: opacity 3s ease-in-out;
+    /* color: rgb(5, 184, 255); */
+    /* background-color: rgb(255, 252, 252); */
+}
+.time-flexible{
+    color: rgb(0, 89, 124);
+    border: 1px solid rgb(0, 127, 177);
+}
+.running-out {
+    border: 1px solid rgb(146, 0, 0);
+    color: rgb(146, 0, 0);
+}
+#time p {
+    margin: 0;
+    padding: 2px 5px;
+    margin-bottom: 5px;
+}
+.timer-hr {
+    height: 4px;
+    border: 1px solid white;
+}
+.hr-flexible {
+    background-color: rgb(0, 127, 177);
+}
+.hr-running-out {
+    background-color: rgb(146, 0, 0);
+}
+.current-question{
+    background-color:yellow;
+    color: black;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+.question.eliminated {
+    color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(255, 0, 128, 0.253);
+}
+.opaque {
+    opacity: 0.5;
+}
+.transparent {
+    opacity: 0.5;
+}
+.almost-full-transparent {
+    opacity: 0.2;
+}
+.selected-option {
+    border-bottom: 1px solid yellow;
+    color: yellow;
+    transition: opacity 1s ease-out;
+}
+.wrong-option {
+    color: red;
+    opacity: 0.4;
+}
+.correct-option {
+    color: turquoise;
+}
+.option-div-highlight:hover{
+    border-bottom: 1px solid yellow;
+    color: yellow;
+    cursor: pointer;
+}
+.option-div-highlight:hover i{
+    color: yellow;
+}
+.option-disabled {
+    cursor: no-drop;
+}
+.question-disabled {
+    cursor: no-drop;
+    background-color: red;
+    color: white;
+}
+.big-font {
+    font-size: 3rem;
+}
+.player-self {
+    background-color: rgba(0, 106, 124, 0.699);
+    color: white;
+}
+.table-div{
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    font-size: 1.2rem;
+    overflow: hidden;
+    height: 50%;
+    width: 18vw;
+}
+.score-table {
+    padding: 10px;
+    z-index: 500;
+    width: 15vw;
+    color: rgb(170, 77, 0);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    transition: all 600ms ease-in-out;
+}
+
+.score-table span:nth-of-type(2n){
+    float: right;
+}
+.expanded .score-table {
+    top: 0;
+    opacity: 1;
+}
+.collapsed .score-table {
+    top: -200px;
+    opacity: 0;
+}
+.score-row{
+    display: flex;
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+}
+.score-table .score-row:nth-of-type(2n){
+    background-color: rgba(221, 253, 244, 0.5);
+}
+@media only screen and (max-width: 720px) {
+    #time {
+        position: absolute;
+        top: 7rem;
+        right: 5px;
+        width: 40vw;
+    }
+    #scorelist{
+        position: absolute;
+        top: 7rem;
+        left: 5px;
+        width: 45vw;
+    }
+    .score-table {
+        width: 45vw;
+    }
+    .table-div {
+        width: 50vw;
+        top: 9rem;
+        left: 5px;
+    }
+    #playButton {
+        position: absolute;
+        top: 20px;
+        margin: 0 auto;
+    }
+}
+
+#next {
+    margin: 10px 35% 0 35%;
+}
+#play {
+    display: flex;
+    width: 95vw;
+    justify-content: center;
+}
+#playButton {
+    position: absolute;
+    bottom: 50px;
+    margin: 0 auto;
+}
+#game-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: dodgerblue;
+}
+#game-info .title {
+    text-align: center;
+    margin-top: 8vh;
+    color: dodgerblue;
+}
+#pin-number {
+    text-align: center;
+    margin: 5vh auto;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: mediumvioletred;
+    border-radius: 5px;
+    color: white;
+}
+#pin-number p {
+    margin: 0;
+}
+#pin-number #pin {
+    font-size: 3rem;
+}
+#player-list{
+    text-align: center;
+}
+#player-list p{
+    margin: 0;
+    color: mediumvioletred;
+}
+#player-list h5 {
+    color: maroon;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.big-fonts {
+    font-size: 3rem;
+}
+.big-fonts span:nth-of-type(2n){
+    float: right;
+}

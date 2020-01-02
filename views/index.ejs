@@ -1,0 +1,54 @@
+<% include ./partials/header %>
+    <link rel="stylesheet" href="/stylesheets/mainpage.css">
+</head>
+<body>
+
+<div id='root'>
+    <div id='container'>
+        <div id='jumbotron'>
+            <h2>Welcome to Jeopardy Online!</h2>
+            <div  class='header-info'>
+                <p class='description'>
+                    With Jeopardy Online users can create quizes with different categories & questions and play interactively with friends online.
+                </p>
+                <hr />
+                <p class='description'>
+                    See below to learn more about the game or start playing with frinds!
+                </p>
+            </div>
+            <div class='btn-div'>
+                <button class='auth'><a href='/login'><i class="fas fa-sign-in-alt"></i> Login</a></button>
+                <button class='auth'><a href='/register'><i class="fas fa-user-plus"></i> Register</a></button>
+                <button class='quiz'><a href='/quiz'><i class="fas fa-search"></i> Find Quizes</a></button>
+                <button class='quiz'><a href='/quiz'><i class="fas fa-plus-square"></i> Create a Quiz</a></button>
+            </div>
+        </div>
+
+        <div id='cards'>
+            <div class='card'>
+                <h3>About <i class="fas fa-address-card card-symbol"></i></h3>
+                <p class='quote'>
+                    Jeopardy! is originally an American television game show created by Merv Griffin. <a href='https://en.wikipedia.org/wiki/Jeopardy!'><i class="fas fa-external-link-alt"></i></a>
+                </p>
+                <p>
+                    Jeopardy Online is a modified version of the American TV show, "Jeopardy," and provides users
+                    an opportunity to create a new quiz and play with friends interactively online.
+                </p>
+                <p>
+                    <a href='/about'>Learn more... <i class="fas fa-external-link-alt"></i></a>
+                </p>
+            </div>
+            <div class='card'>
+                <h3>Look for Quizes <i class="fas fa-search card-symbol"></i> </h3>
+                <% for(var i of quizes) { %>
+                    <p>
+                        <%= i.title %> 
+                    </p>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ./partials/footer %>
+

@@ -1,0 +1,141 @@
+/* mainpage/index.ejs */
+#root{
+    padding: 0;
+    margin: 0;
+    width: 98vw;
+    height: 100%;
+    /* overflow: hidden; */
+}
+#container {
+    overflow: auto;
+    height: 100%;
+    margin: 20px;
+    padding: 1rem 0 2rem 0;
+    border-radius: 10px;
+    border: 2px solid rgb(171, 180, 184);
+    /* -webkit-box-shadow: inset 0 0 20px rgb(189, 212, 221);
+    -moz-box-shadow: inset 0 0 20px rgb(189, 212, 221); */
+    box-shadow: inset 0 0 20px rgb(189, 212, 221);
+}
+#jumbotron {
+    /* border: 4px outset rgb(97, 162, 216); */
+    border-top: 2px solid rgb(100, 158, 206); 
+    border-left: 2px solid rgb(98, 157, 206); 
+    border-bottom: 4px solid rgb(45, 83, 114); 
+    border-right: 4px solid rgb(45, 83, 114); 
+    box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 4rem 4rem 2rem 4rem;
+    margin: 0 auto;
+    width: 50%;
+    background-color: steelblue;
+    color: rgb(238, 238, 238);
+    font-size: 1.1rem;
+}
+#jumbotron h2{
+    margin: 0;
+    font-size: 3rem;
+    margin-bottom: 6rem;
+}
+#jumbotron hr {
+    margin: 0;
+    margin-top: 2rem;
+}
+
+#cards {
+    padding: 6rem 20%;
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    border-radius: 10px;
+    background-color: rgb(188, 221, 248);
+    width: 40%;
+    /* font-size: 1rem; */
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.6);
+}
+.card .card-symbol{
+    float: right;
+}
+.card .quote {
+    font-style: italic;
+}
+.card h3 {
+    border-radius: 5px 5px 0 0;
+    padding: 5px 20px;
+    margin: 0;
+    font-size: 1.2rem;
+    background-color: steelblue;
+    color: white;
+}
+.card p {
+    padding: 0 20px;
+}
+
+/* buttons */
+.btn-div {
+    margin-top: 3rem;
+}
+#jumbotron button{
+    margin-right: 4rem;
+    font-size: 1rem;
+    padding: 5px;
+    outline: none;
+    border-radius: 5px;
+}
+#container a{
+    text-decoration: none;
+    color: inherit;
+    /* color: rgb(49, 115, 170); */
+    color: rgb(46, 87, 121);
+}
+.btn-div .auth {
+    cursor: pointer;
+    background-color: rgb(255, 230, 0);
+    border: 1px solid rgb(158, 142, 2);
+}
+
+.btn-div .auth:hover {
+    background-color: rgb(253, 241, 131);
+}
+.btn-div .quiz {
+    cursor: pointer;
+    background-color: rgb(157, 231, 45);
+    border: 1px solid rgb(122, 182, 32);
+}
+.btn-div .quiz:hover {
+    background-color: rgb(207, 252, 141);
+}
+
+@media (max-width: 720px){
+    #root {
+        height: 100%;
+    }
+    #container, #root {
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        border: none;
+        box-shadow: none;
+        overflow: auto;
+    }
+    #jumbotron {
+        width: auto;
+        padding: 10px;
+    }
+    #jumbotron h2{
+        margin-top: 25px;
+        font-size: 2rem;
+    }
+    #jumbotron p, #jumbotron button{
+        font-size: 1rem;
+    }
+    #cards {
+        margin: auto;
+        padding: 3rem 30px;
+        display: block;
+    }
+    .card {
+        width: auto;
+    }
+}

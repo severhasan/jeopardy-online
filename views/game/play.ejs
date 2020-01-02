@@ -1,0 +1,56 @@
+<% include ../partials/header %>
+    <link rel="stylesheet" href="/stylesheets/play.css">
+    <link rel="stylesheet" href="/stylesheets/createquiz.css">
+</head>
+<body>
+
+<div id='info'>
+    <div class="info-text">Waiting for players</div>
+</div>
+
+<div id='scorelist' class='invisible'>
+    <p id='score-info'> <i class='far fa-list-alt'></i> Score: ...</p>
+</div>
+<div class='table-div collapsed'></div>
+<div id='time' class='full-transparent time-flexible'>
+    <div class='timer-count'>
+        <p class='time-remaining'>Time Remaining</p>
+        <p class='timer-seconds'></p>
+    </div>
+    <hr class='timer-hr hr-flexible' />
+</div>
+
+
+<div id='root'>
+    <div id='content'>
+
+    </div>
+    <div id='game-info'>    
+        <div class='title'> <%= quizTitle %> </div>
+
+        <div id='pin-number'>
+            <p>PIN NUMBER:</p>
+            <p id='pin'><%=pin%></p>
+        </div>
+
+        <div id='player-list'>
+            <hr />
+            <h5>PLAYER LIST:</h5>
+            <div id='players'></div>
+        </div>
+    </div>
+</div>
+
+
+<script type='text/Javascript'>
+    const pin = <%-JSON.stringify(pin)%>;
+    const player = <%-JSON.stringify(player)%>;
+</script>
+
+<script type='text/Javascript' src="/socket.io/socket.io.js"></script>
+<script type='text/Javascript' src="/javascript/quiztable.js"></script>
+
+<script type='text/Javascript' src="/javascript/play.js"></script>
+<script type='text/Javascript' src="/javascript/message.js"></script>
+
+<% include ../partials/footer %>

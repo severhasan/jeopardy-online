@@ -1,0 +1,85 @@
+body {
+    box-sizing: border-box;
+}
+#root-auth {
+    box-sizing: border-box;
+    width: 100%;
+    height: 95vh;
+}
+#container-auth {
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+/* TITLES */
+#container-auth h2{
+    margin-bottom: 50px;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+/* FORMS */
+
+.form{
+    margin: 20px 0;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.label {
+    font-weight: bold;
+    display: block;
+    margin:15px 0 5px 0;
+}
+
+.InputElement {
+    outline: none;
+    border: 1px solid #ddd;
+    background-color: white;
+    font: inherit;
+    padding: 6px 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;;
+}
+
+.InputElement:focus {
+    outline: none;
+    background-color: rgba(198, 221, 221, 0.4);
+}
+
+.Invalid {
+    border: 1px solid red;
+    background-color: rgba(250, 150, 139, 0.6);
+}
+.Valid {
+    border: 2px solid rgb(109, 185, 65);
+}
+.ValidationError {
+    text-align: initial;
+    color: red;
+    margin-top: 10px;
+}
+
+#container-auth button {
+    margin-top: 25px;
+}
+
+
+@media (max-width: 720px){
+    #container-auth {
+        box-sizing: border-box;
+        padding: 0 20px;
+        width: 100%
+    }
+}

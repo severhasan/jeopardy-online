@@ -1,0 +1,39 @@
+<% include ../partials/header %>
+    <link rel="stylesheet" href="/stylesheets/play.css">
+    <link rel="stylesheet" href="/stylesheets/createquiz.css">
+
+    <link rel="stylesheet" href="/stylesheets/quizpage.css">
+</head>
+<body>
+
+
+<div id='root-quiz'>
+    <div id="container-quiz">
+        <h2>Create a New Quiz</h2>
+        <% if (user) { %>
+            <button onclick="proceed('create')">CREATE</button>
+        <% } else {%>
+            <p>You want to create a new quiz? Then you will have to log in!</p>
+        <% } %>    
+        <br />
+    
+        <h2>Browse Quizzes</h2>
+    
+        <% for(var i of quizes) { %>
+            <div>
+                <p>Quiz: <%= i.title %> | by: <%=i.username %></p>
+
+                <button onclick="proceed('play', '<%=i.id%>')">Play</button>
+            </div>
+            <hr />
+        <% } %>
+    </div>
+</div>
+
+<script type='text/Javascript'>
+    const user = <%-JSON.stringify(user)%>;
+</script>
+<script type='text/Javascript' src='/javascript/quizpage.js'></script>
+
+
+<% include ../partials/footer %>

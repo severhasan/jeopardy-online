@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+    <link rel="stylesheet" href="/stylesheets/connect.css">
+</head>
+<body>
+
+<div id='connect'>
+    <div id='message'>Please enter game pin</div>
+    <div class='flex-center'>
+        <p class='connect-input' id='pin' data-placeholder='Enter pin' contenteditable="true"></p>
+        <p class='connect-input invisible' id='username' data-placeholder='Enter username' contenteditable="true"></p>
+        <div id='btn-div'><button id='submit'>Send</button></div>
+    </div>
+    <form action='/game/connect' method="POST" style='visibility: hidden'>
+        <input id='form-username' required type='text' name='player' placeholder="Enter a nickname">
+        <input id='form-pin' required type='text' name='pin' placeholder="Pin Number">
+        <input id='form-submit' type='submit'>
+    </form>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="/javascript/connect.js"></script>
+
+
+
+<% include ../partials/footer %>

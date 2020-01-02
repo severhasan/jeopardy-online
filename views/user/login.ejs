@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+    <link rel="stylesheet" href="/stylesheets/auth.css">
+</head>
+<body>
+
+<div id='root-auth'>
+    <div id='container-auth'>
+        <div class='form-div'>
+            <h2>Login with your account</h2>
+            <form class='form' action='<%=variables.login.route %>' method="POST">
+                <label class="label">Email</label>
+                <input class="InputElement" type='email' name='email' placeholder='Email'>
+                <label class="label">Password</label>
+                <input class="InputElement" type='password' name='password' placeholder='Password'>
+                <button>Login</button>
+            </form>
+            <div>
+                Don't have an account? Register <a href='<%=variables.register.route %>'>here</a>.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<% include ../partials/footer %>
