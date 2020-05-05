@@ -1,5 +1,6 @@
 # Online Interactive Jeopardy Game
 This game has been built on NodeJS using socket.io to form a communication between players. MongoDB is used for Database and bcrypt is used for password hashing.
+live: http://jeopardyonline.herokuapp.com/
 
 ## CREATING A NEW QUIZ
 Upon logging in, users can create their own quizzes. /quiz will provide a section to create a new quiz, and the user will be directed to the quiz page. The user will be able to add, update or delete the quiz as long as they are logged in. Each Update or deletion will also update or delete the query in the database to sync the front-end with back-end.
